@@ -1,0 +1,87 @@
+* {
+  margin: 0; /* Retirando padrões google */
+  padding: 0; /* Retirando padrões google */
+  box-sizing: border-box;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+body {
+  /* background: color imagem repeat/size */
+  background: url(assets/bg-mobile.jpg) no-repeat top center/cover;
+}
+
+#container {
+  width: 360px;
+  /* tamanho estilo cor  */
+  /* border: 1px solid red; */
+  /*alinha no meio, não faz auto em cima nem baixo pois so pega os lados */
+  margin: 56px auto 0px auto;
+  padding: 0 24px;
+}
+
+#profile {
+  /* Elementos inline aceitam que o eleme. pai diga seu posicionamento */
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  /* display: block;  se aqui fosse block o #profile nao funcionaria */
+  width: 112px;
+  /* margin: auto; Só o margin nao funciona pq ele é para elementos block */
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/* Links */
+ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 24px 0;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 24px;
+
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.7s;
+}
+
+/* SudoSelector ou pseudo seletor */
+ul li a:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.4px solid white;
+}
+
+/* Links Sociais */
+#social-links {
+  display: flex;
+  gap: 32px;
+  padding: 24px 0px;
+  font-size: 36px;
+  justify-content: center;
+}
