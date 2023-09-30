@@ -65,12 +65,39 @@ body * {
 }
 
 /* Switch */
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
 #switch button {
   width: 32px;
   height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
   border: 0;
   border-radius: 50%;
-  background: white var(--switch-bg-url) no-repeat center;
+  /* Centralizando position */
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
 }
 
 /* Links */
@@ -94,8 +121,8 @@ ul li a {
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
   border-radius: 8px;
-
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 
   text-decoration: none;
   font-weight: 500;
@@ -132,6 +159,7 @@ ul li a:hover {
 }
 
 footer {
+  /* Alinhamento de texto */
   padding: 24px;
   text-align: center;
 }
