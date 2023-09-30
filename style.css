@@ -4,14 +4,26 @@
   box-sizing: border-box;
 }
 
-body * {
-  font-family: "Inter", sans-serif;
-  color: white;
+:root {
+  /* Variavel para todo o texto em branco */
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+}
+
+.light {
+  /* Adicionando alterações para o tema branco */
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
 }
 
 body {
-  /* background: color imagem repeat/size */
-  background: url(assets/bg-mobile.jpg) no-repeat top center/cover;
+  /* background: cor imagem repeat/size */
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
 }
 
 #container {
@@ -74,7 +86,7 @@ ul li a {
 /* SudoSelector ou pseudo seletor */
 ul li a:hover {
   background: rgba(255, 255, 255, 0.05);
-  border: 1.4px solid white;
+  border: 1.4px solid var(--text-color);
 }
 
 /* Links Sociais */
