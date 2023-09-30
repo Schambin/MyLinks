@@ -5,15 +5,25 @@
 }
 
 :root {
-  /* Variavel para todo o texto em branco */
+  /* dark mode vars */
   --text-color: white;
   --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(255, 255, 255, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.02);
+  --switch-bg-url: url(./assets/MoonStars.svg);
 }
 
 .light {
-  /* Adicionando alterações para o tema branco */
+  /* light mode vars */
   --text-color: black;
   --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.06);
+  --switch-bg-url: url(./assets/Sun.svg);
 }
 
 body {
@@ -35,6 +45,7 @@ body * {
   padding: 0 24px;
 }
 
+/* Profile */
 #profile {
   /* Elementos inline aceitam que o eleme. pai diga seu posicionamento */
   text-align: center;
@@ -51,6 +62,15 @@ body * {
   font-weight: 500;
   line-height: 24px;
   margin-top: 8px;
+}
+
+/* Switch */
+#switch button {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background: white var(--switch-bg-url) no-repeat center;
 }
 
 /* Links */
@@ -71,8 +91,8 @@ ul li a {
 
   padding: 16px 24px;
 
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
   border-radius: 8px;
 
   backdrop-filter: blur(4px);
@@ -85,7 +105,7 @@ ul li a {
 
 /* SudoSelector ou pseudo seletor */
 ul li a:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--surface-color-hover);
   border: 1.4px solid var(--text-color);
 }
 
@@ -108,7 +128,7 @@ ul li a:hover {
 }
 
 #social-links a:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--highlight-color);
 }
 
 footer {
