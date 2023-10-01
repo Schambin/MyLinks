@@ -11,7 +11,7 @@
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(255, 255, 255, 0.02);
-  --highlight-color: rgba(255, 255, 255, 0.02);
+  --highlight-color: rgba(87, 87, 87, 0.4);
   --switch-bg-url: url(./assets/MoonStars.svg);
 }
 
@@ -22,7 +22,7 @@
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
-  --highlight-color: rgba(0, 0, 0, 0.06);
+  --highlight-color: rgba(24, 24, 24, 0.062);
   --switch-bg-url: url(./assets/Sun.svg);
 }
 
