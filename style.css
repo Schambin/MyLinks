@@ -29,6 +29,7 @@
 body {
   /* background: cor imagem repeat/size */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -37,10 +38,11 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
   /* tamanho estilo cor  */
   /* border: 1px solid red; */
   /*alinha no meio, não faz auto em cima nem baixo pois so pega os lados */
+  max-width: 588px;
   margin: 56px auto 0px auto;
   padding: 0 24px;
 }
@@ -163,4 +165,14 @@ footer {
   /* Alinhamento de texto */
   padding: 24px;
   text-align: center;
+}
+
+/* Media Queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
